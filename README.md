@@ -55,7 +55,7 @@ Stores:
 - **Next.js**
 - **React.js**
 - **Tailwind CSS**
-- ** JavaScript**
+- **JavaScript**
 
 ### Backend
 - **Next.js API Routes**
@@ -78,7 +78,7 @@ Stores:
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/Devendra-soni0105/Crop-recommendation.git
+git clone https://github.com/Himanshu-soni3185/Crop-recommendation.git
 ```
 
 ### 2️⃣ Navigate to Project Folder
