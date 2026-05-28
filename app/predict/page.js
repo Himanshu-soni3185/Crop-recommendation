@@ -65,19 +65,22 @@ export default function Predict() {
     
     try {
       // 1. Call Python AI Server
-      const pythonRes = await fetch('http://localhost:5000/predict', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          N: formData.nitrogen,
-          P: formData.phosphorous,
-          K: formData.potassium,
-          temperature: formData.temperature,
-          humidity: formData.humidity,
-          ph: formData.ph,
-          rainfall: formData.rainfall
-        }),
-      });
+    const pythonRes = await fetch(
+  `${process.env.NEXT_PUBLIC_PYTHON_API}/predict`,
+  {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      N: formData.nitrogen,
+      P: formData.phosphorous,
+      K: formData.potassium,
+      temperature: formData.temperature,
+      humidity: formData.humidity,
+      ph: formData.ph,
+      rainfall: formData.rainfall
+    }),
+  }
+);
 
       const pythonData = await pythonRes.json();
 
